@@ -1,7 +1,6 @@
 {
 	"extends": "./.svelte-kit/tsconfig.json", // SvelteKit의 기본 tsconfig 파일을 확장
 	"compilerOptions": {
-		"types": ["svelte", "vite/client"], // 컴파일러가 인식할 수 있는 타입 정의 파일들
 		"allowJs": true, // JavaScript 파일을 TypeScript 컴파일러에서 허용
 		"checkJs": true, // JavaScript 파일에서도 타입 검사를 수행
 		"esModuleInterop": true, // CommonJS와 ES 모듈 간의 호환성 지원
