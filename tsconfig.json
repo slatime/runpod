@@ -1,0 +1,44 @@
+{
+	"extends": "./.svelte-kit/tsconfig.json", // SvelteKit의 기본 tsconfig 파일을 확장
+	"compilerOptions": {
+		"types": ["svelte", "vite/client"], // 컴파일러가 인식할 수 있는 타입 정의 파일들
+		"allowJs": true, // JavaScript 파일을 TypeScript 컴파일러에서 허용
+		"checkJs": true, // JavaScript 파일에서도 타입 검사를 수행
+		"esModuleInterop": true, // CommonJS와 ES 모듈 간의 호환성 지원
+		"forceConsistentCasingInFileNames": true, // 파일 이름 대소문자 일관성 강제
+		"resolveJsonModule": true, // JSON 파일을 모듈로 임포트할 수 있게 함
+		"skipLibCheck": true, // 라이브러리 파일의 타입 검사를 건너뜀
+		"sourceMap": true, // 컴파일된 파일에 소스 맵을 생성
+		"strict": true, // 모든 엄격한 타입 검사 옵션을 활성화
+		"typeRoots": [
+			"node_modules/@types" // 타입 정의 파일을 검색할 경로
+		],
+		"paths": {
+			"@src/*": [
+				"./src/*" // @src/* 경로를 ./src/*로 매핑
+			],
+			"@lib/*": [
+				"./src/lib/*" // @lib/* 경로를 ./src/lib/*로 매핑
+			],
+			"@components/*": [
+				"./src/common/components/*" // @components/* 경로를 ./src/common/components/*로 매핑
+			],
+			"@type/*": [
+				"./src/lib/type/*" // @type/* 경로를 ./src/lib/type/*로 매핑
+			],
+			"@util/*": [
+				"./src/lib/util/*" // @util/* 경로를 ./src/lib/util/*로 매핑
+			],
+			"@store/*": [
+				"./src/lib/store/*" // @store/* 경로를 ./src/lib/store/*로 매핑
+			]
+		}
+	},
+	"include": [
+		"./node_modules/@sveltejs/kit/src/runtime/app/environment/index.js", // SvelteKit 런타임 환경 파일 포함
+		"src/**/*.d.ts", // 모든 .d.ts 파일 포함
+		"src/**/*.ts", // 모든 .ts 파일 포함
+		"src/**/*.js", // 모든 .js 파일 포함
+		"src/**/*.svelte" // 모든 .svelte 파일 포함
+	]
+}

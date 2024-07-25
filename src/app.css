@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+
+    body {
+        -webkit-font-smoothing: antialiased;
+        min-height: 100svh;
+        letter-spacing: -0.5px;
+        font-family: "Ubuntu", "IBM Plex Sans KR", sans-serif, system-ui, sans-serif;/* 별도 폰트 설정*/
+
+    }
+
+    input,
+    button,
+    textarea,
+    select {
+        font: inherit;
+    }
+    p,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        overflow-wrap: break-word;
+    }
+
+
+    :root {
+        --short-animation-duration: 300ms;
+
+        /* hsl picker https://hslpicker.com/#ba1c1c*/
+
+        --primary-color: 79 92% 54%;
+        --primary-color-hover: 79, 82%, 50%;
+        --secondary-color: 12, 81%, 57%;
+        --secondary-color-hover: 2, 72%, 46%;
+
+        --surface-dark: 60, 90%, 4%;
+        --surface-dark-sub: 0, 0%, 27%;
+        --surface-light: 0, 0%, 100%;
+
+        --text-dark1:0, 0%, 8%;
+        --text-dark2:0, 0%, 31%;
+        --text-dark3:0, 0%, 64%;
+
+        --text-light1:0, 0%, 100%;
+        --text-light2:0, 0%, 85%;
+        --text-light3:0, 0%, 64%;
+
+        --border1:0, 0%, 95%;
+        --border2:0, 0%, 64%;
+
+    }
+
+    /*:root {*/
+    /*    color-scheme: light;*/
+
+    /*    --brand-color1:var(--brand-color-light);*/
+    /*    --brand-color2:var(--brand-hover-light);*/
+    /*    --brand-color3:var(--brand-focus-light);*/
+    /*    --brand-color4:var(--brand-disabled-light);*/
+
+    /*    --brand-bg1:var(--surface-front1-light);*/
+    /*    --brand-bg2:var(--surface-front2-light);*/
+    /*    --brand-bg3:var(--surface-front3-light);*/
+
+    /*    --brand-text1:var(--text-front1-light);*/
+    /*    --brand-text2:var(--text-front2-light);*/
+    /*    --brand-text3:var(--text-front3-light);*/
+    /*    --brand-text4:var(--text-front4-light);*/
+
+    /*    --brand-border:var(--border-front-light);*/
+
+    /*    --brand-success:var(--success-front);*/
+    /*    --brand-info:var(--info-front);*/
+    /*    --brand-warn:var(--warn-front);*/
+    /*    --brand-error:var(--error-front);*/
+    /*    --hover-color:var(--brand-color-light);*/
+    /*}*/
+
+
+    .body {
+        @apply transition-colors flex flex-col items-center;
+    }
+}
+
